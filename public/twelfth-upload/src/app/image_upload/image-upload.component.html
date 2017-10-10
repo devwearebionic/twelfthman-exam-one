@@ -1,0 +1,31 @@
+<div class="image-upload-form-container">
+	
+<form enctype="multipart/form-data" method="POST" [formGroup]="imageForm">
+
+	<div class="form-group row">
+		<div class="col-md-12">
+            <label class="" for="image"><strong>Image</strong></label>
+            <input formControlName="image" class="form-control" id="image" name="image" placeholder="" type="file" ng2FileSelect [uploader]="uploader">
+        </div>
+        <div class="col-md-12"></div>
+    </div>
+    <div class="form-group row">
+		<div class="col-md-12">
+            <label class="" for="description"><strong>Description</strong></label>
+            <textarea formControlName="description" class="form-control image-upload-description" id="description" name="description" placeholder=""></textarea>
+        </div>
+        <div class="col-md-12"></div>
+    </div>
+    <div class="form-actions">
+        <div class="form-group row">
+            <div class="col-md-9">
+                <button type="button" (click)="save(imageForm.value)" class="btn btn-primary" type="button">Save</button>
+                <button type="button"  [routerLink]="['/image/all']" class="btn btn-default" type="button">Cancel</button>
+            </div>
+        </div>
+    </div>
+</form>
+
+
+
+</div>

@@ -1,0 +1,25 @@
+<section class="image-upload-header">
+    <div class="row">
+      <div class="col-md-12">
+        <h1>My Library</h1>
+      </div>
+    </div>
+</section>
+<section class="image-upload-container">
+  <div class="image-upload-nav">
+    <ul class="nav justify-content-end main-nav">
+      <li class="nav-item">
+        <a class="nav-link" [routerLinkActive]="['active']" [routerLink]="['/image/all']">Active</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLinkActive]="['active']" [routerLink]="['/image/delete']">Deleted</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLinkActive]="['active']" [routerLink]="['/image/upload']">Upload</a>
+      </li>
+    </ul>
+  </div>
+  <div class="iamge-upload-content">
+    <router-outlet></router-outlet>
+  </div>
+</section>

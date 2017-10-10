@@ -1,0 +1,50 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+	background-color: #f3f4f8;
+	margin: 0 auto;
+}
+
+.main-nav li a{
+	color:#5c607d;
+}
+
+.item-image{
+}
+
+.item-image img{
+	width: 100%;
+}
+
+.item-description{
+	background-color: #fff;
+	padding: 40px 20px;
+	text-align: center;
+}
+
+.image-container{
+	padding: 50px 0px;
+}
+
+.item-image-container{
+	margin-bottom: 20px;
+}
+
+.image-action-nav{
+	background-color: #5c607d;
+	position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    color: #fff;
+}
+
+.action-nav li a{
+	color: #fff;
+}
+
+.item-no-image{
+    text-align: center;
+}

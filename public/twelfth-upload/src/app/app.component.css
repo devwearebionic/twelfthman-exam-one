@@ -1,0 +1,24 @@
+.image-upload-header{
+	background-color: #ffffff;
+	padding: 50px 50px 10px;
+}
+
+.image-upload-container{
+	padding: 20px 100px;
+}
+
+.main-nav li a{
+	border: 1px solid #5c607d;
+	border-radius: 2px;
+	border
+	color: #5c607d;
+}
+
+.main-nav li a:visited{
+	color: #5c607d;
+}
+
+.main-nav li a.active{
+	background-color: #5c607d;
+	color: #fff;
+}

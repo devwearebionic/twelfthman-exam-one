@@ -1,0 +1,28 @@
+<div class="image-container">
+	<ng-container *ngIf="images?.length <= 0">
+		<div class="item-no-image">
+			<h3>No images found</h3>
+		</div>
+	</ng-container>
+	<div class="image-item-container row">
+		<ng-container *ngFor="let image of images">
+			<div class="item-image-container col-md-4 col-lg-3">
+				<div class="item-image">
+					<a href="javascript:void(0);" (click)="selectImage(image.id, image.url)"> 
+						<img src="http://twelfth.dev/image/{{ image.url }}">
+					</a>
+				</div>
+				<div class="item-description">
+					{{ image.description }}
+				</div>
+			</div>
+		</ng-container>
+	</div>
+	<div class="image-action-nav" *ngIf="actionNav === true">
+		<ul class="nav justify-content-center action-nav">
+		  <li class="nav-item">
+		    <a class="nav-link" href="javascript:void(0);" (click)="restoreImage()"><i class="fa fa-reply"></i></a>
+		  </li>
+		</ul>
+	</div>
+</div>
