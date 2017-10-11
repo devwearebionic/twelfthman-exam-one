@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { Location } from '@angular/common';
 
+import { appConfig } from './../app.config';
 import { Image } from './../model/image'; 
 import { ImageService } from './../service/image.service';
 
@@ -44,7 +45,7 @@ export class ImageAllComponent implements OnInit {
 		this.selectedImageUrl = selectedImageUrl;
 		this.actionNav = true;
 
-		this.imageUrl = 'http://twelfth.dev/image/'+this.selectedImageUrl;
+		this.imageUrl = appConfig.imageUrl + '/' + this.selectedImageUrl;
 
 	}
 
