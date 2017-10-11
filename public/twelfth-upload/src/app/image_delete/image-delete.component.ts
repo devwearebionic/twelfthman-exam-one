@@ -21,6 +21,7 @@ export class ImageDeleteComponent {
 	actionNav:boolean = false;
 	images:Image;
 	imageUrl:string;
+	apiImageUrl:string;
 
 	constructor(
     public router: Router,
@@ -31,6 +32,8 @@ export class ImageDeleteComponent {
 
 
 	ngOnInit(): void {
+
+		this.apiImageUrl = appConfig.imageUrl;
 
 		this.imageService.deleted()
 	        .subscribe(

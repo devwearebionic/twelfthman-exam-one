@@ -21,6 +21,7 @@ export class ImageAllComponent implements OnInit {
 	actionNav:boolean = false;
 	images:Image;
 	imageUrl:string;
+	apiImageUrl:string;
 
 	constructor(
     public router: Router,
@@ -31,6 +32,8 @@ export class ImageAllComponent implements OnInit {
 
 
 	ngOnInit(): void {
+
+		this.apiImageUrl = appConfig.imageUrl;
 
 		this.imageService.active()
 	        .subscribe(
@@ -45,7 +48,7 @@ export class ImageAllComponent implements OnInit {
 		this.selectedImageUrl = selectedImageUrl;
 		this.actionNav = true;
 
-		this.imageUrl = appConfig.imageUrl + '/' + this.selectedImageUrl;
+		this.imageUrl = this.apiImageUrl + '/' + this.selectedImageUrl;
 
 	}
 
