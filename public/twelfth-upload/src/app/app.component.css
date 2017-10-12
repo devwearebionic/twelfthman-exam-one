@@ -22,3 +22,16 @@
 	background-color: #5c607d;
 	color: #fff;
 }
+
+
+@media (max-width: 1000px) {
+
+    .main-nav{
+		-webkit-box-pack: center!important;
+    	justify-content: center!important;
+	}
+
+}
+
+
+    
