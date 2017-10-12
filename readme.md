@@ -6,10 +6,10 @@ The following are needed to install:
 
 1. [Composer](https://getcomposer.org/)
 2. [Git Bash](https://git-for-windows.github.io/)
-3. Mysql
-4. Php
-5. Node Js
-6. Angular CLI
+3. [Mysql](https://www.mysql.com/)
+4. [Php](http://php.net/)
+5. [Node Js](https://nodejs.org/en/)
+6. [Angular CLI](https://cli.angular.io/)
 
 ## Install
 
