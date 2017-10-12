@@ -1,5 +1,9 @@
 # Twelfth Image Upload Exam
 
+## Introduction
+
+This project is a simple SPA ( Single Page Application ) which allows you to preview, download, delete and restore images. 
+
 ## Prerequisite
 
 The following are needed to install:
