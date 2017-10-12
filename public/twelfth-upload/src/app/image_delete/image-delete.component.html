@@ -6,14 +6,16 @@
 	</ng-container>
 	<div class="image-item-container row">
 		<ng-container *ngFor="let image of images">
-			<div class="item-image-container col-md-4 col-lg-3">
-				<div class="item-image">
-					<a href="javascript:void(0);" (click)="selectImage(image.id, image.url)"> 
-						<img src="{{ apiImageUrl }}/{{ image.url }}">
-					</a>
-				</div>
-				<div class="item-description">
-					{{ image.description }}
+			<div class="col-md-3 col-lg-3">
+				<div class="item-image-container">
+					<div class="item-image">
+						<a href="javascript:void(0);" (click)="selectImage(image.id, image.url)"> 
+							<img src="{{ apiImageUrl }}/{{ image.url }}">
+						</a>
+					</div>
+					<div class="item-description">
+						{{ image.description }}
+					</div>
 				</div>
 			</div>
 		</ng-container>
