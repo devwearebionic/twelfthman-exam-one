@@ -33,15 +33,15 @@ Next, run the following command in git bash to insert all the sample records use
 
 	php artisan db:seed
 
-Next, run the following command in git bash
+Next, run the following command in git bash to include all new custom added classes
 
 	php artisan dump-autoload
 
-Next, within 'public\twelfth-upload' run the following command in git bash
+Next, within 'public\twelfth-upload' run the following command in git bash to install all node modules
 
 	npm install
 
-Finally, within 'public\twelfth-upload' run the following command in git bash
+Finally, within 'public\twelfth-upload' run the following command in git bash to open the site
 
 	ng serve --open
 
