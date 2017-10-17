@@ -39,7 +39,7 @@ Next, run the following command in git bash to insert all the sample records use
 
 Next, run the following command in git bash to include all new custom added classes
 
-	php artisan dump-autoload
+	composer dump-autoload
 
 Next, within 'public\twelfth-upload' run the following command in git bash to install all node modules
 
