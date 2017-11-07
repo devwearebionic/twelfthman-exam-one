@@ -30,7 +30,6 @@ export class ImageAllComponent implements OnInit {
     private location: Location
   ) {}
 
-
 	ngOnInit(): void {
 
 		this.apiImageUrl = appConfig.imageUrl;
