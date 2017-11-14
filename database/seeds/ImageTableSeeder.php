@@ -19,23 +19,28 @@ class ImageTableSeeder extends Seeder
         $images = [
             [
                 'url'                 => 'image-1.jpg',
-                'description'         => 'Who we are'
+                'description'         => 'Who we are',
+                'filename'            => 'image-1.jpg',
             ],
             [
                 'url'                 => 'image-2.jpg',
-                'description'         => 'Partnership rationale'
+                'description'         => 'Partnership rationale',
+                'filename'            => 'image-2.jpg',
             ],
             [
                 'url'                 => 'image-3.jpg',
-                'description'         => 'Partnership rationale'
+                'description'         => 'Partnership rationale',
+                'filename'            => 'image-3.jpg',
             ],
             [
                 'url'                 => 'image-4.jpg',
-                'description'         => 'The opportunity'
+                'description'         => 'The opportunity',
+                'filename'            => 'image-4.jpg',
             ],
             [
                 'url'                 => 'image-5.jpg',
-                'description'         => 'Our clubs'
+                'description'         => 'Our clubs',
+                'filename'            => 'image-5.jpg',
             ],
         ];
 
