@@ -69,6 +69,7 @@ class ImageController extends Controller
         $imageData = [
             'url'                 => $request->get('url'),
             'status'              => 1,
+            'filename'            => $request->get('original'),
             'description'         => $request->get('description'),
             'created_at'          => Carbon::now()
         ];
@@ -248,7 +249,8 @@ class ImageController extends Controller
             $response = [
                 'status'     => true,
                 'message'    => 'Image uploaded successfully',
-                'filename'   => $filename_path
+                'filename'   => $filename_path,
+                'original'   => $request->file('photo')->getClientOriginalName()
             ];
 
             return response()->json($response, Response::HTTP_OK);
@@ -261,6 +263,46 @@ class ImageController extends Controller
         ];
         
         return response()->json($response, Response::HTTP_INTERNAL_SERVER_ERROR);
+
+    }
+
+    public function download(Request $request){
+
+        $id = $request->get('id');
+
+        if( !( $id > 0 ) ){
+
+            $response = [
+                'status' => false,
+                'message' => 'No image found'
+            ];
+
+            return response()->json($response, Response::HTTP_OK);
+
+        }
+
+        $image = $this->imageRepository->getById($id);
+
+        if( !$image ){
+
+            $response = [
+                'status' => false,
+                'message' => 'No image found'
+            ];
+
+        }
+        else{
+
+            $response = [
+                'status'  => true,
+                'message' => 'Image successfully fetched',
+                'data'    => $image
+            ];
+
+        }
+
+        return response()->download(public_path('image/'.$image->url),$image->filename);
+
 
     }
 

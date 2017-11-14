@@ -25,6 +25,7 @@ export class ImageUploadComponent implements OnInit {
 	imageForm: FormGroup;
 	imageData: any;
 	filename:string;
+	original:string;
 
 	public uploader:FileUploader = new FileUploader({url: URL, itemAlias: 'photo'});
   	public hasBaseDropZoneOver:boolean = false;
@@ -50,6 +51,7 @@ export class ImageUploadComponent implements OnInit {
 	        
 		  let uploadResponse:any = JSON.parse(response); 
 		  this.filename = uploadResponse.filename;
+		  this.original = uploadResponse.original;
 
 		};
 
@@ -79,7 +81,7 @@ export class ImageUploadComponent implements OnInit {
 
   	storeData(){
 
-	    let imageData:any = {'url':this.filename};
+	    let imageData:any = {'url':this.filename, 'original':this.original};
 
 	    this.imageData = Object.assign(this.imageData,imageData);
 

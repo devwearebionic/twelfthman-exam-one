@@ -22,6 +22,7 @@ Route::group(['prefix' => 'image'], function()
 	Route::delete('delete/{id}', 'ImageController@delete');
 	Route::post('restore', 'ImageController@restore');
 	Route::post('upload', 'ImageController@upload');
+	Route::post('download', 'ImageController@download');
 	Route::post('create', 'ImageController@store');
 	// Route::get('blob/{id}', 'ImageController@blob');
 

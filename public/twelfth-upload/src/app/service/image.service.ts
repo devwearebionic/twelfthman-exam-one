@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Headers, Http, RequestOptions, Response } from '@angular/http';
+import { Headers, Http, RequestOptions, Response, ResponseContentType } from '@angular/http';
 import { appConfig } from './../app.config';
 
 import 'rxjs/add/operator/toPromise';
@@ -51,6 +51,17 @@ export class ImageService {
         return this.http.post(appConfig.apiUrl + 'image/restore', JSON.stringify({'id':id}), {headers: headers}).map((response: Response) => {
             let image = response.json();
             return image.status;
+        });
+
+    }
+
+    download(id:number) {
+
+        var headers = new Headers();
+        headers.append('Content-Type', 'application/json');
+        
+        return this.http.post(appConfig.apiUrl + 'image/download', JSON.stringify({'id':id}), {responseType:ResponseContentType.Blob, headers: headers}).map((response: Response) => {
+            return response.blob();
         });
 
     }

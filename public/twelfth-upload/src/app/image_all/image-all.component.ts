@@ -5,6 +5,7 @@ import { Location } from '@angular/common';
 import { appConfig } from './../app.config';
 import { Image } from './../model/image'; 
 import { ImageService } from './../service/image.service';
+import { saveAs } from 'file-saver/FileSaver';
 
 declare var $: any;
 declare var swal: any;
@@ -41,13 +42,28 @@ export class ImageAllComponent implements OnInit {
 	      });
   	}
 
-	selectImage(selectedImageId:number, selectedImageUrl:string){
+  	hideNav(event){
+  		this.actionNav = false;
+  	}
 
+	selectImage(selectedImageId:number, selectedImageUrl:string){
+		
 		this.selectedImageId = selectedImageId;
 		this.selectedImageUrl = selectedImageUrl;
 		this.actionNav = true;
 
-		this.imageUrl = this.apiImageUrl + '/' + this.selectedImageUrl;
+	}
+
+	downloadImage(){
+
+		this.imageService.download(this.selectedImageId)
+	      	.subscribe(
+	          data => {
+
+				this.actionNav = false;
+				saveAs(data, this.selectedImageUrl);
+
+	          });
 
 	}
 
