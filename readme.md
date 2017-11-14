@@ -17,9 +17,7 @@ The following are needed to install:
 
 ## Install
 
-To install, clone the repository by running the following command:
-
-	git clone https://cpambrosio@bitbucket.org/straightarrow-creativetech/cpambrosio-exam.git
+To install, clone or download this repository
 
 Next, create a virtual host 'twelfth.dev' for the project
 
